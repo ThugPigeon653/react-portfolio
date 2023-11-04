@@ -45,6 +45,6 @@
     },
     "devDependencies": {
         "gh-pages": "^6.0.0"
-    },
-    "homepage": "http://thugpigeon653.github.io/react-portfolio"
+    }
+    
 }
