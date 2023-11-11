@@ -21,6 +21,16 @@
     min-height: 300px;
 }
 
+.custom-modal .modal-content {
+    background-color: #343a40;
+    color: #fff;
+}
+
+.custom-modal .modal-header,
+.custom-modal .modal-body,
+.custom-modal .modal-footer {
+    border-color: #fff; /* Set the desired border color if needed */
+}
 .po_item img {
     max-width: 100%;
 }
