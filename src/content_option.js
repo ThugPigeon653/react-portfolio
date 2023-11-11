@@ -1,7 +1,7 @@
 const logotext = "L. Neilsen";
 const meta = {
     title: "Lachlan Neilsen",
-    description: "I’m John Doe data scientist _ Full stack devloper,currently working in Berlin",
+    description: "I’m Lachlan Neilsen data AWS Certified Full stack devloper, currently working in Australia",
 };
 
 const introdata = {
