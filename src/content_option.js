@@ -9,7 +9,7 @@ const introdata = {
     animated: {
         first: "AWS Certified Developer",
         second: "Full Stack Developer",
-        third: "High-Voltage Technical Specialist",
+        third: "High-Voltage Specialist",
     },
     description: "My name is Lachlan Neilsen, and I have a passion for full-stack development. With a strong background in technical and corporate workplaces, and a wide array of IT and Cloud-related skills, I am dedicated to creating innovative and efficient solutions that drive business success.",
     your_img_url: "me.png",
