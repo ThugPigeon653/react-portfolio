@@ -41,19 +41,19 @@ const skills = [{
         value: 90,
     },
     {
-        name: "Djano",
-        value: 85,
+        name: "AWS",
+        value: 90,
     },
     {
-        name: "Javascript",
+        name: "Unity",
         value: 80,
     },
     {
         name: "React",
-        value: 60,
+        value: 70,
     },
     {
-        name: "Jquery",
+        name: "Oracle",
         value: 85,
     },
 ];
@@ -78,6 +78,13 @@ const dataportfolio = [{
         description: "A CMS system, which automates deployment of infrastructure through Cloudformation",
         details:<p>A CMS system for repair-based businesses.<br/> This project deploys code to AWS services - all infrastructure is provisioned and initialized using Cloudformation. The backend consists of an RDS database (postgresql), which has it's DDL applied using Cloudformation. Lambda functions have been created, to handle all DML logic for accessing the database. This way, all backend logic can be neatly hidden behind a Rest API.<br/>The API is built using the AWS API Gateway service, allowing all Lambda functions to become accessible through the API endpoint, using the HTTP/HTTPS protocol. In addition to convenience, using API Gateway in this manner allowed all backend services to be kept inside the VPC in my AWS account. This approach is highly secure, because no data on the VPC side of my API is publicly exposed. Instead, the attack surface shrinks to primarily to just the API gateway itself. By implementing Cognito user pools for Authentication, and restricting access only to authenticated parties, only authorized users with a valid access token are able to make requests to the API. In addition to restricting the API gateway, Cognito user tags are checked - a form of ABAC, to cater for the implementation of a multi-tennant database. While it makes sense to use a multi-tennant solution for RDS (given the price of underlying instances accross multiple AZs), it is critical that users not be allowed to access the information of another user.<br/>Finally, the React application uses AWS Amplify frontent components to authenticate the user, and make requests to the API, which will effectively manipulate and query the database, through the rest of the infrastructure mentioned.<br/>As well as the main infrastructure, this project uses many other AWS services for convenience and security. Some of these include KMS, SSM, S3, Cloudshell, IAM, and more.</p>,
         link: "https://github.com/ThugPigeon653/repairshop",
+    },
+    {
+        img: "images/docker-kube-winpscli-cfn.png",
+        title: "Kubernetes quickstarts",
+        description: "Numerous approaches to deploying dockerized apps on Kubernetes clusters",
+        details:<p>This repository features a few solutions - each dedicated to setting up a different kinds of Kubernetes clusters, and deploying our application. Within each project, there is a sample flask application, which can easliy be replaced with minimal config changes. This app is automatically dockerized, and deployed to a Kubernetes cluster, using Docker Hub as the image repository. By using batch scripts to interact with control planes and AWS API's, these quickstarts have been designed to work on any Windows machine, and are perfect for use in a delivery pipeline. This makes setting up furture Kubernetes clusters and deployments far more streamlined.<br/>To acheive this, I have referred to the relevant documentation (i.e. minikube, EKS, etc.), along with '--help' in the cli, to build a list of commands which are capable of performing each operation. In addition, I created powershell scripts for installing dfependancies where required - this was triggered at the start of the automated batch script. Beyond this, Cloudformation was also used to setup any AWS infrastructure required, ensuring the wokflow is portable and will not require any prior setup within your AWS account.<br/><br/>As well as single-image deployments, 'multi' configurations have also been included. Instead of publicly exposing our application, these solutions use nginx to serve content, which is routed to it by our app (as specified in local config files). This approach is a more secure, because the data application is hidden away, with no direct public endpoint.<br/><br/></p>,
+        link: "https://github.com/ThugPigeon653/kubernetes-clusters",
     },
     {
         img: "images/ghActions-pytest.png",
