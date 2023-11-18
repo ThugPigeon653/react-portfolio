@@ -47,7 +47,7 @@
 }
 
 .nav_ac:hover {
-    color: greenyellow;
+    color: var(--text-color-2);
 }
 
 .br-top,
