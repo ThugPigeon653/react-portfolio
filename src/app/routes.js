@@ -1,5 +1,5 @@
 import React from "react";
-import {HashRouter, Router, Route, Routes} from "react-router-dom";
+import { Route, Routes} from "react-router-dom";
 import withRouter from "../hooks/withRouter"
 import { Home } from "../pages/home";
 import { Portfolio } from "../pages/portfolio";
@@ -19,13 +19,13 @@ const AnimatedRoutes = withRouter(({ location }) => (
       classNames="page"
       unmountOnExit
     >
-      <Route location={location}>
-        <Route index element={<Home />} />
+      <Routes location={location}>
+        <Route exact path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="*" element={<Home />} />
-      </Route>
+      </Routes>
     </CSSTransition>
   </TransitionGroup>
 ));
@@ -33,9 +33,7 @@ const AnimatedRoutes = withRouter(({ location }) => (
 function AppRoutes() {
   return (
     <div className="s_c">
-      <Router>
-        <AnimatedRoutes />
-      </Router>
+      <AnimatedRoutes />
       <Socialicons />
     </div>
   );
